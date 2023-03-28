@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int Compress(char* filename, char* compressed) {
+int Compress(const char* filename, const char* compressed) {
     struct WordStruct* wordCounts = NULL;
     int numberOfWords = 0;
     char** words = NULL;

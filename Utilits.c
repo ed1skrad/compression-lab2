@@ -3,7 +3,7 @@
 #include "Struct.h"
 #include "Initialization.h"
 
-int getPopularLongWord(struct WordStruct* word, int numberOfWords) {
+int getPopularLongWord(const struct WordStruct* word, int numberOfWords) {
     int maxLength = 0;
     int count = 0;
     int pos = -1;

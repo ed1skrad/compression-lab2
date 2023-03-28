@@ -19,3 +19,11 @@
 148	288	7017242721049508	compression.exe	9cdedeb192f04cc4
 2	131	7017309747280338	CMakeFiles/compression.dir/main.c.obj	7e1b52ad87167377
 131	293	7017309748860277	compression.exe	9cdedeb192f04cc4
+2	156	7017340019299000	CMakeFiles/compression.dir/File.c.obj	2a7908d0509014b5
+157	304	7017340020738995	compression.exe	9cdedeb192f04cc4
+24	165	7017342469977932	CMakeFiles/compression.dir/main.c.obj	7e1b52ad87167377
+2	174	7017342470057975	CMakeFiles/compression.dir/openFile.c.obj	5359583907827660
+18	182	7017342470147979	CMakeFiles/compression.dir/Compression.c.obj	e856a34edaed41b3
+13	183	7017342470157958	CMakeFiles/compression.dir/File.c.obj	2a7908d0509014b5
+29	189	7017342470237930	CMakeFiles/compression.dir/Utilits.c.obj	6b18647683e47cca
+189	358	7017342471877961	compression.exe	9cdedeb192f04cc4

@@ -29,7 +29,7 @@ int fileConverting(char* filename, struct WordStruct** wordCounts, int* numberOf
             currentSize+=2;
             str = realloc(str, currentSize*sizeof(char));
             str[currentSize-2] = '\0';
-            str[currentSize--] = '\0';
+            //str[currentSize--] = '\0';
             *words = realloc(*words, ((*wordsSize) + 1) * sizeof(char *));
             (*words)[*wordsSize] = str;
             (*wordsSize)++;
