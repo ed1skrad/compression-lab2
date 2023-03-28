@@ -8,7 +8,7 @@ int getPopularLongWord(const struct WordStruct* word, int numberOfWords);
 int getUnpopularShortWord(const struct WordStruct* word, int numberOfWords, int c);
 int punctuationMark(char c);
 void removeAt(struct WordStruct** word, int pos, int* count);
-int fileConverting(char* filename, struct WordStruct** word_counts, int* numberOfWords, char*** words, int* wordsSize);
+int fileConverting(const char* filename, struct WordStruct** wordCounts, int* numberOfWords, char*** words, int* wordsSize);
 char* getFileName();
 char* getFileCompressedName();
 int Compress(const char* filename, const char* compressed);

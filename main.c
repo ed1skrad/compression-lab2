@@ -1,7 +1,7 @@
 #include "Initialization.h"
 
 int main() {
-    char* filename = getFileName();
-    char* compressedFileName = getFileCompressedName();
+    const char* filename = getFileName();
+    const char* compressedFileName = getFileCompressedName();
     Compress(filename, compressedFileName);
 }
