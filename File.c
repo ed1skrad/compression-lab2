@@ -60,5 +60,6 @@ int fileConverting(const char* filename, struct WordStruct** wordCounts, int* nu
     }
 
     fclose(fp);
+    free(fp);
     return 1;
 }
