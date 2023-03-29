@@ -3,5 +3,5 @@
 int main() {
     const char* filename = getFileName();
     const char* compressedFileName = getFileCompressedName();
-    Compress((char*)filename, compressedFileName);
+    Compress(filename, compressedFileName);
 }
