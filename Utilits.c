@@ -51,7 +51,6 @@ int getUnpopularShortWord(const struct WordStruct* word, int numberOfWords, int 
     }
     return pos;
 }
-
 int punctuationMark(char c) {
     char marks[] = " \t\n\"'.(),?!-=";
     for(int i = 0; i < 13; i++) {

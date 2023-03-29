@@ -24,43 +24,46 @@ int fileConverting(const char* filename, struct WordStruct** wordCounts, int* nu
             str = realloc(str, (currentSize+1)*sizeof(char));
             str[currentSize] = c;
             currentSize++;
+            continue;
         }
-        else {
-            currentSize+=2;
-            str = realloc(str, currentSize*sizeof(char));
-            str[currentSize-2] = '\0';
-            *words = realloc(*words, ((*wordsSize) + 1) * sizeof(char *));
-            (*words)[*wordsSize] = str;
-            (*wordsSize)++;
 
-            int founded = 0;
-            for (int i = 0; i < *numberOfWords; i++) {
-                if (strcmp((*wordCounts)[i].Word, str) == 0) {
-                    founded = 1;
-                    (*wordCounts)[i].Count++;
-                    break;
-                }
-            }
-            if (founded == 0) {
-                *wordCounts = realloc(*wordCounts, ((*numberOfWords) + 1) * sizeof(struct WordStruct));
-                (*wordCounts)[*numberOfWords].Word = (*words)[(*wordsSize) - 1];
-                (*wordCounts)[*numberOfWords].Count = 1;
-                (*numberOfWords)++;
-            }
+        currentSize+=2;
+        str = realloc(str, currentSize*sizeof(char));
+        str[currentSize-2] = '\0';
 
-            str = calloc(2, sizeof(char));
-            str[0] = c;
-            str[1] = '\0';
-            *words = realloc(*words, ((*wordsSize) + 1) * sizeof(char *));
-            (*words)[*wordsSize] = str;
-            (*wordsSize)++;
-            str = NULL;
-            currentSize = 0;
+        *words = realloc(*words, ((*wordsSize) + 1) * sizeof(char *));
+        (*words)[*wordsSize] = str;
+        (*wordsSize)++;
+
+        int founded = 0;
+        for (int i = 0; i < *numberOfWords; i++) {
+            if (strcmp((*wordCounts)[i].Word, str) == 0) {
+                founded = 1;
+                (*wordCounts)[i].Count++;
+                break;
+            }
         }
+
+        if (founded == 0) {
+            *wordCounts = realloc(*wordCounts, ((*numberOfWords) + 1) * sizeof(struct WordStruct));
+            (*wordCounts)[*numberOfWords].Word = (*words)[(*wordsSize) - 1];
+            (*wordCounts)[*numberOfWords].Count = 1;
+            (*numberOfWords)++;
+        }
+
+        str = calloc(2, sizeof(char));
+        str[0] = c;
+        str[1] = '\0';
+
+        *words = realloc(*words, ((*wordsSize) + 1) * sizeof(char *));
+        (*words)[*wordsSize] = str;
+        (*wordsSize)++;
+
+        str = NULL;
+        currentSize = 0;
     }
 
     fclose(fp);
-    free(fp);
     free(str);
     return 1;
 }

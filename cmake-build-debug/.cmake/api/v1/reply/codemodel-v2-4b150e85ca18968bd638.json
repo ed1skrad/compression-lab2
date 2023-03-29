@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Artem/Desktop/CLionProjects/compression/cmake-build-debug",
-		"source" : "C:/Users/Artem/Desktop/CLionProjects/compression"
+		"build" : "C:/Users/atema/Documents/GitHub/compression-lab2/cmake-build-debug",
+		"source" : "C:/Users/atema/Documents/GitHub/compression-lab2"
 	},
 	"version" : 
 	{
